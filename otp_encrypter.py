@@ -1,16 +1,20 @@
+from textwrap import shorten
 import numpy as np
 
-text1 = "canim benim"
-text2 = "meine katze"
+text1 = "macan lamba"
+text2 = "veran katze"
 
-key = '45678c6c566bcadb2e7cc8'
+key = '7168c4abe5c8a1c8f476abec54b8c8bf2f0e5020e5ae1aeaa7b'
 messages = [text1, text2]
+
 
 ciphertexts = []
 for message in messages:
-    key_bytes = list(bytes.fromhex(key))
+    shortened_key = key[:2*len(text1)]
+    key_bytes = list(bytes.fromhex(shortened_key))
     message_bytes = list(message.encode("ascii"))
     ciphertexts.append(np.bitwise_xor(key_bytes, message_bytes))
 
 print(key_bytes)
-print(ciphertexts)
+print(text1, ciphertexts[0].tolist())
+print(text2, ciphertexts[1].tolist())
