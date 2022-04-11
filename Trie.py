@@ -8,11 +8,12 @@ class Trie(object):
             if l not in current:
                 current[l] = {}
             current = current[l]
-        current['#']=1
+        current['#']={}
 
     def search(self, word):
         current = self.child
         for l in word:
+            #print("Current:", current)
             if l not in current:
                 return False
             current = current[l]

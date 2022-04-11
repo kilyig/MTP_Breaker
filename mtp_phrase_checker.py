@@ -1,6 +1,6 @@
 from Trie import Trie
 
-class OTPPhraseChecker:
+class MTPPhraseChecker:
     def __init__(self, words):
         self._words = words
         self._trie = Trie()
