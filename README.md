@@ -3,7 +3,7 @@
 # Multiple-Time Pad Breaker
 Reveals messages that were encrypted using the one-time pad scheme with the same key. 
 
-Other MTP breaker programs on GitHub use the decryption technique explanied [here](https://www.thecrowned.org/the-one-time-pad-and-the-many-time-pad-vulnerability). This technique works when there are many ciphertexts and space characters in the plaintexts do not align. Also, in most cases, this technique offers partial decryption only. Thus, another program is needed to fill in the gaps.
+Other MTP breaker programs on GitHub use the decryption technique explained [here](https://www.thecrowned.org/the-one-time-pad-and-the-many-time-pad-vulnerability). This technique works when there are many ciphertexts and space characters in the plaintexts do not align. Also, in most cases, this technique offers partial decryption only. Thus, another program is needed to fill in the gaps.
 
 OTP Breaker approaches the problem from a different angle. Rather than treating the ciphertexts as a list of characters and trying to find certain characters inside them, OTP Breaker assumes that the ciphertexts follow a certain structure, like sentences in a language do, and tries to build meaningful plaintexts from the ciphertexts.
 
